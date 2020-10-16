@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="83f391e7-7d76-4a20-8fbb-b40d85734be7" Version="0.9.0.9" />
+      <PackageReference Include="FSharp.Core" Version="4.7.1" />
+      <PackageReference Include="LanguageExt.Core" Version="3.4.20-beta" />
+      <PackageReference Include="LanguageExt.FSharp" Version="3.4.20-beta" />
+      <PackageReference Include="LAnnotations" Version="2017.52.22.55" />
+      <PackageReference Include="LaYumba.Functional" Version="0.10.0" />
+      <PackageReference Include="LCore" Version="2017.52.19.44" />
+      <PackageReference Include="NUnit" Version="3.12.0" />
+    </ItemGroup>
+
+</Project>

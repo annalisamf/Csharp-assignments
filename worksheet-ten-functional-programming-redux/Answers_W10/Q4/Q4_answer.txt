@@ -1,0 +1,20 @@
+/*
+ *Consider the extension methods defined on IEnumerable in System.LINQ.Enumerable.
+ * Which ones could potentially return nothing, or throw some kind of not-found exception,
+ * and would therefore be good candidates for returning an Option<T> instead?
+ */
+ 
+ /*One example is Enumerable.Reverse<TSource>(IEnumerable<TSource>).
+  * The parameter IEnumerable<TSource> is a sequence of values to reverse. If this is null then an ArgumentNullException is raised.
+  * We can return an Option<T> which will be None if the sequence is null.
+  *
+  *
+  *Another example is Enumerable.Range(Int32, Int32) , this method throws ArgumentOutOfRangeException
+  *if the the second argument (the number of sequential integers to generate) is less than 0.
+  *We could return an Option<T> instead so that we could have None if the second argument is less than 0.
+  *
+  * Single<TSource>(IEnumerable<TSource>) 	:
+  * Returns the only element of a sequence, and throws an exception if there is not exactly one element in the sequence.
+  * Instead of throwing an exception, we could use Option to return None if there is not exactly one element in the sequence
+  * This is true for all the Single type of method, because they all throw an exception if the condition is not satisfied.
+  */
